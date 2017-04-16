@@ -1,0 +1,7 @@
+nethack on
+hardstatus on
+#hardstatus alwayslastline "%{= +db}%{Gk}%w %=%l %c"
+hardstatus alwayslastline "%{= .G}%-w%{= .B}*%50>%n* %t*%{= .G}%+w%< %{= .G}%-=%H %m/%d/%y %c:%s%{-}"
+startup_message off
+vbell off
+

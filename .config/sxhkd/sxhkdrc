@@ -1,0 +1,35 @@
+# Move active window to bottom screen, partial
+super + S
+    wmctrl -r ":ACTIVE:" -e 0,2232,1200,1605,1050
+
+# Move active window to bottom screen
+super + D
+    wmctrl -r ":ACTIVE:" -e 0,1919,1200,1920,1050
+
+# Move Spotify to bottom screen
+super + s
+    wmctrl -r "Spotify" -e 0,2232,1200,1605,1050; \
+    wmctrl -a "Spotify"
+
+# Move Discord to bottom screen
+super + d
+    wmctrl -r "Discord" -e 0,1919,1200,1920,1050
+
+# Maximize to left screen
+super + l
+    wmctrl -r ":ACTIVE:" -b remove,maximized_vert,maximized_horz; \
+    wmctrl -r ":ACTIVE:" -e 0,0,0,-1,-1; \
+    wmctrl -r ":ACTIVE:" -b add,maximized_vert,maximized_horz;
+
+# Maximize to right screen
+super + r
+    wmctrl -r ":ACTIVE:" -b remove,maximized_vert,maximized_horz; \
+    wmctrl -r ":ACTIVE:" -e 0,1920,0,-1,-1; \
+    wmctrl -r ":ACTIVE:" -b add,maximized_vert,maximized_horz;
+
+# Maximize to bottom screen
+super + b
+    wmctrl -r ":ACTIVE:" -b remove,maximized_vert,maximized_horz; \
+    wmctrl -r ":ACTIVE:" -e 0,1920,1200,-1,-1; \
+    wmctrl -r ":ACTIVE:" -b add,maximized_vert,maximized_horz;
+
